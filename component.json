@@ -1,0 +1,21 @@
+{
+  "name": "better-window",
+  "repo": "ekryski/better-window",
+  "description": "A better google maps info window with a sane API",
+  "version": "0.0.1",
+  "keywords": [
+    "google",
+    "maps",
+    "infowindow",
+    "infobox"
+  ],
+  "dependencies": {
+    "component/emitter": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}

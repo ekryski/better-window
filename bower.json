@@ -1,0 +1,33 @@
+{
+  "name": "better-window",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ekryski/better-window",
+  "authors": [
+    "Eric Kryski <e.kryski@gmail.com>"
+  ],
+  "description": "A better google maps info window with a sane API",
+  "moduleType": [
+    "globals",
+    "amd",
+    "node"
+  ],
+  "dependencies": {
+    "emitter": "*"
+  },
+  "keywords": [
+    "google",
+    "maps",
+    "infowindow",
+    "infobox"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "component.json"
+    "test",
+    "tests"
+  ]
+}
