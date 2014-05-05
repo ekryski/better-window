@@ -12,9 +12,6 @@
     "amd",
     "node"
   ],
-  "dependencies": {
-    "emitter": "*"
-  },
   "keywords": [
     "google",
     "maps",
@@ -26,8 +23,12 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "component.json"
+    "component.json",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "emitter": "~1.5.1"
+  },
+  "devDependencies": {}
 }
