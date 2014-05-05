@@ -1,7 +1,7 @@
 {
   "name": "better-window",
   "main": "index.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/ekryski/better-window",
   "authors": [
     "Eric Kryski <e.kryski@gmail.com>"
@@ -28,7 +28,7 @@
     "tests"
   ],
   "dependencies": {
-    "emitter": "~1.5.1"
+    "emitter": "component/emitter#~1.1.2"
   },
   "devDependencies": {}
 }
