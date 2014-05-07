@@ -35,7 +35,7 @@
   function BetterWindow(map, anchor, options){
 
     this.options = extend({
-      css: 'BetterWindow',
+      css: 'better-window',
       disableAutoPan: true,
       visible: true,
       zIndex: null,
@@ -74,7 +74,7 @@
       self.position(this.getPosition());
     });
 
-    this.bindings.close = google.maps.event.addDomListener(this.el.firstChild, 'click', function(ev){
+    this.bindings.close = google.maps.event.addDomListener(findByClass('close', this.el), 'click', function(ev){
       ev.cancelBubble = true;
       ev.stopPropagation();
 
@@ -98,6 +98,7 @@
    */
   BetterWindow.prototype.createFragment = function() {
     var element = document.createElement('div');
+    element.className = this.options.css;
     element.innerHTML = this.options.template;
     element.insertAdjacentHTML('beforeEnd', this.options.content);
 
@@ -111,12 +112,12 @@
    */
   BetterWindow.prototype.style = function(styles, element) {
     styles = extend(styles, {
-      height: '150px',
-      width: '300px',
+      // height: '150px',
+      // width: '300px',
       position: 'absolute',
       visibility: this.options.visible ? 'visible' : 'hidden',
-      overflow: 'auto',
-      background: '#FFFFFF'
+      // overflow: 'auto',
+      // background: '#FFFFFF'
       // zIndex: this.options.zIndex
     });
 
@@ -134,7 +135,6 @@
    * Now we actually add the DOM node to the map.
    */
   BetterWindow.prototype.onAdd = function(){
-    console.log('Adding to map', arguments);
 
     this.getPanes()[this.options.pane].appendChild(this.el);
 
@@ -149,7 +149,6 @@
    * the BetterWindow and clean up all its bindings.
    */
   BetterWindow.prototype.onRemove = function(){
-    console.log('Removing from map', arguments);
 
     // Unbind all listeners and remove from DOM
     for (var i in this.bindings) {
@@ -172,7 +171,6 @@
    * after calling setMap(this.map).
    */
   BetterWindow.prototype.draw = function(){
-    console.log('Drawing', arguments);
     
     this.position();
   };
@@ -242,6 +240,16 @@
     this.emit('changed:position', this.options.position);
   };
 
+
+  var findByClass = function(matchClass, dom) {
+    var elems = dom.getElementsByTagName('*');
+
+    for (var i in elems) {
+      if ((' ' + elems[i].className + ' ').indexOf(' ' + matchClass + ' ') > -1) {
+        return elems[i];
+      }
+    }
+  };
 
   /**
    * Mixin a given set of properties
