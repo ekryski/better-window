@@ -2,7 +2,7 @@
   "name": "better-window",
   "repo": "ekryski/better-window",
   "description": "A better google maps info window with a sane API",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "keywords": [
     "google",
     "maps",
