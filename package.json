@@ -16,11 +16,12 @@
     "infobox"
   ],
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "expect.js": "~0.3.1"
   },
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "make build"
   }
 }

@@ -30,5 +30,7 @@
   "dependencies": {
     "emitter": "component/emitter#~1.1.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "mocha": "~1.18.2"
+  }
 }

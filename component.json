@@ -12,7 +12,9 @@
   "dependencies": {
     "component/emitter": "*"
   },
-  "development": {},
+  "development": {
+    "visionmedia/mocha": "*"
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": [
