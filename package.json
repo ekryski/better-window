@@ -1,0 +1,26 @@
+{
+  "name": "better-window",
+  "description": "A better google maps info window with a sane API",
+  "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ekryski/better-window.git"
+  },
+  "engines": {
+    "node": "~0.10.0"
+  },
+  "keywords": [
+    "google",
+    "maps",
+    "infowindow",
+    "infobox"
+  ],
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  }
+}
